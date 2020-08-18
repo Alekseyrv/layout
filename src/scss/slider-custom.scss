@@ -1,0 +1,186 @@
+$accent: #FF7931;
+$black: #000000;
+$light: #FFFFFF;
+$dark-gray: #4d4d4d;
+$gray: #b3b3b3;
+$light-gray: #f9f9fc;
+.main-slider__next {
+    transform: scale(-1,1);
+    right: calc(50% - 33px);
+}
+.main-slider__prev {
+    right: calc(50% - -26px);
+}
+.main-slider__next, .main-slider__prev {
+    width: 10px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: calc(50% - -32px);
+    margin: 0 auto;
+    cursor: pointer;
+}
+.main-slider__prev:after {
+    content: '';
+    border: 1px solid rgba(255,255,255,0.6);
+    width: 0px;
+    height: 40px;
+    right: -25px;
+    top: -10px;
+    position: absolute;
+}
+.main-slider__bigtxt {
+    display: block;
+    position: absolute;
+    top: calc(50% - 96px);
+    margin: 0px;
+    z-index: 999;
+    & h2 {
+        font-weight: 300;
+        font-family: 'Raleway',sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $light;
+        font-size: 72px;
+        margin: 0;
+        z-index: 999;
+    }
+}
+.main-slider__smtxt {
+    display: block;
+    position: absolute;
+    width: 470px;
+    text-align: center;
+    bottom: 34px;
+    z-index: 999;
+    & p {
+        font-family: 'Raleway',sans-serif;
+        line-height: 28px;
+        font-size: 14px;
+        color: $light;
+        font-weight: 200;
+        letter-spacing: 0.3px;
+        margin: 0;
+    }
+}
+.main-slider__button {
+
+    position: absolute;
+    top: 65px;
+    width: 99px;
+    height: 27px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    cursor: pointer;
+    z-index: 999;
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+    & span {
+        color: $light;
+        font-family: 'Raleway',sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+}
+.main-slider__texthrz {
+    display: flex;
+    width: 955px;
+    right: calc(50% - 470px);
+    position: absolute;
+    top: calc(50% - -48px);
+    margin: 0 auto;
+    color: rgba(255,255,255,0.8);
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: 'Raleway',sans-serif;
+    letter-spacing: 0.5px;
+}
+.texthrz__prev, .texthrz__next {
+    cursor: pointer;
+}
+.texthrz__prev:after {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 0px;
+    border: 1px solid rgba(255,255,255,0.6);
+    top: 7px;
+    left: 100px;
+    cursor: default;
+}
+.texthrz__next:before {
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 0px;
+    border: 1px solid rgba(255,255,255,0.6);
+    top: 7px;
+    right: 81px;
+    cursor: default;
+}
+.main-slider__prevhrz, .main-slider__nexthrz {
+    width: 50%;
+    height: 28%;
+    position: absolute;
+    top: calc(33% + 62px);
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.main-slider__nexthrz {
+    right: 0;
+}
+.main-slider__nexthrz:hover ~ .main-slider__texthrz {
+    & .texthrz__next {
+        color: rgba(255,255,255,1);
+    }
+    & .texthrz__next:before {
+        border: 1px solid rgba(255,255,255,0.9);
+    }
+}
+.main-slider__prevhrz:hover ~ .main-slider__texthrz {
+    & .texthrz__prev {
+        color: rgba(255,255,255,1);
+    }
+    & .texthrz__prev:after {
+        border: 1px solid rgba(255,255,255,0.9);
+    }
+}
+.second-slider__prev, .second-slider__next {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+    border: none;
+    cursor: pointer;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+.second-slider__next {
+    right: -22px;
+}
+.second-slider__prev {
+    left: -22px;
+}
+.second-slider .glider-slide {
+    min-height: auto;
+}
+.main-slider__prevhrz:hover .main-slider__texthrz {
+    color: rgba(255,255,255,1);
+}
+.second-slider__next button {
+    cursor: pointer;
+    border: 6px solid transparent;
+    border-left: 6px solid #b3b3b3;
+    width: 0px;
+    height: 0px;
+    top: 7px;
+    margin-left: 22px;
+}
